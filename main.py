@@ -96,9 +96,9 @@ frm_email.grid(row=1, column=3)
 
 
 poblaciones = ["Madrid", "Alcobendas", "San Sebastián de los Reyes", "Algete", "Pozuelo", "Las Rozas", "Majadahonda", "Móstoles", "Alcorcón", "Boadilla del Monte", "Villaviciosa de Odón"]
-opcion_poblacion = tk.StringVar()
-opcion_poblacion.set(poblaciones[0])
-cmbx_poblacion = ttk.Combobox(textvariable=opcion_poblacion, values=poblaciones)
+opc_poblacion = tk.StringVar()
+opc_poblacion.set(poblaciones[0])
+cmbx_poblacion = ttk.Combobox(textvariable=opc_poblacion, values=poblaciones)
 cmbx_poblacion.pack(pady=10)
 
 frm_lista = tk.Listbox(ventana)
@@ -115,7 +115,7 @@ def enviar_solicitud():
     apellidos = frm_apellidos.get()
     telefono = frm_telefono.get()
     email = frm_email.get()
-    poblacion = opcion_poblacion.get()
+    poblacion = opc_poblacion.get()
     excursiones = obtener_seleccion(opcion)
     accesorios = ""
     if mochila_var.get():
